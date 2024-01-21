@@ -18,12 +18,11 @@ use App\Models\Tasca;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('projecte.index');
 });
 
-Route::resource("projecte", ProjecteController::class); 
-Route::resource("projecte.tasca", TascaController::class);
-
+Route::resource('projecte', ProjecteController::class); 
+Route::resource('projecte.tasca', TascaController::class);
 
 
 
